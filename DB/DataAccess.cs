@@ -11,7 +11,7 @@ namespace DB
     {
         public DataAccess()
         {
-            connection = new SqlConnection("server=BRENDA-PC; database=;DiscosDB integrated security=true");
+            connection = new SqlConnection("server=BRENDA-PC; database=DiscosDB; integrated security=true");
             command = new SqlCommand();
         }
         private SqlConnection connection;
