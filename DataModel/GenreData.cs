@@ -20,7 +20,7 @@ namespace DataModel
             List<Genre> List = new List<Genre>();
             try
             {
-                data.SP("ListSP");
+                data.Query("select Id, Name from Genre");
                 data.Read();
                 while (data.ReaderProp.Read())
                 {
