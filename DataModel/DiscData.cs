@@ -40,5 +40,21 @@ namespace DataModel
             finally { data.Close(); }
 
         }
+    
+        public void Add(Disc newDisc)
+        {
+            try
+            {
+                data.Query("insert into Disco (Name, IdGenre) values (@Name, @IdGenre)");
+                data.Parameters("@Name", newDisc.Name);
+                data.Parameters("@IdGenre", newDisc.Genre.Id);
+                data.Execute();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            finally { data.Close(); }
+        }
     }
 }

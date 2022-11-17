@@ -15,7 +15,7 @@ namespace DataModel
             data = new DataAccess();
         }
         private DataAccess data;
-        public List<Genre> ListSP()
+        public List<Genre> List()
         {
             List<Genre> List = new List<Genre>();
             try
